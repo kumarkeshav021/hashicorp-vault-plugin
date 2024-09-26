@@ -11,17 +11,24 @@ public class VaultAwsIam {
     @NonNull
     private String role;
 
+    private String targetIamRole;
+
     @NonNull
     private String serverId;
 
-    public VaultAwsIam(@NonNull String role, @NonNull String serverId) {
+    public VaultAwsIam(@NonNull String role, String targetIamRole, @NonNull String serverId) {
         this.role = role;
         this.serverId = serverId;
+        this.targetIamRole = targetIamRole;
     }
 
     @NonNull
     public String getRole() {
         return role;
+    }
+
+    public String getTargetIAMRole() {
+        return targetIamRole;
     }
 
     @NonNull
